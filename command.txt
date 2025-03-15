@@ -1,0 +1,14 @@
+python .\calc_local_morans.py "C:/CWL/spatial/LocalMorans/data/OK_Summer.shp" AvgTemp queen
+
+docker build -t eforoutan/calc_local_morans:latest .
+
+
+docker run --rm -v C:/CWL/spatial/LocalMorans/data:/data eforoutan/calc_local_morans:latest /data/OK_Summer.shp AvgTemp queen
+
+docker login
+docker push eforoutan/calc_local_morans
+
+
+wsl -d Ubuntu
+
+cwltool calc_local_morans.cwl calc_local_morans.yml

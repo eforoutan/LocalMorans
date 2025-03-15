@@ -1,0 +1,5 @@
+input_shapefile:
+  class: Directory
+  path: data
+field_name: "AvgTemp"
+weight_type: "queen"
