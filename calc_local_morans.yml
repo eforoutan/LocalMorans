@@ -1,5 +1,9 @@
 input_shapefile:
-  class: Directory
-  path: data
+  # class: Directory
+  # path: data
+
+  class: File
+  path: OK_Summer.geojson
+
 field_name: "AvgTemp"
 weight_type: "queen"
